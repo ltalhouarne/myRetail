@@ -1,8 +1,4 @@
-CONTENTS OF THIS FILE
----------------------
-   
- - Running Instructions
- - Technology Stack
+# myRetail
  
  Running Instructions:
  --------------------
