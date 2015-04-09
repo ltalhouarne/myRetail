@@ -1,8 +1,4 @@
-CONTENTS OF THIS FILE
----------------------
-   
- - Running Instructions
- - Technology Stack
+#my Retail
  
  Running Instructions:
  --------------------
@@ -25,5 +21,3 @@ HSQLDB
 Angular JS
 Bootstrap
 Jquery
-
-Thank you for your time!
