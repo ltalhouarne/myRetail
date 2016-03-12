@@ -2,22 +2,23 @@
  
  ![alt](https://github.com/ltalhouarne/myRetail/blob/master/myRetail.PNG)
  
- # Running Instructions:
+##Running Instructions:
  --------------------
  
-Run "mvn package" at the root of the project directory (Java release 1.7).
+* Run "mvn package" at the root of the project directory (Java release 1.7).
 
-Deploy it to a tomcat server.
+* Deploy it to a tomcat server.
 
-The app will be availabe at the following url:
+* The app will be availabe at the following url:
 
+```
 http://localhost:8080/
+```
 
 (If you would like to run it with an embedded tomcat server, head over to the [tomcat-embedded](https://github.com/ltalhouarne/myRetail/tree/tomcat-embedded) branch. 
 
 
-
- # Technology Stack:
+##Technology Stack:
  ----------------
  
 Spring boot
