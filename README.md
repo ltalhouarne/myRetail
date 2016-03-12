@@ -5,7 +5,10 @@
 ##Running Instructions:
  --------------------
  
-* Run "mvn package" at the root of the project directory (Java release 1.7).
+ * You can download the war directly from my private nexus [repository](http://nexus-ltalhouarne.rhcloud.com/#view-repositories;releases~browsestorage)
+  or you can:
+ 
+  Run "mvn package" at the root of the project directory (Java release 1.7).
 
 * Deploy it to a tomcat server.
 
