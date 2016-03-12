@@ -1,4 +1,4 @@
-if ( typeof module === "object" && module && typeof module.exports === "object" ) {
+if (typeof module === "object" && module && typeof module.exports === "object") {
 	// Expose jQuery as module.exports in loaders that implement the Node
 	// module pattern (including browserify). Do not create the global, since
 	// the user will be storing it themselves locally, and globals are frowned
@@ -12,13 +12,15 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 	// derived from file names, and jQuery is normally delivered in a lowercase
 	// file name. Do this after creating the global so that if an AMD module wants
 	// to call noConflict to hide this version of jQuery, it will work.
-	if ( typeof define === "function" && define.amd ) {
-		define( "jquery", [], function () { return jQuery; } );
+	if (typeof define === "function" && define.amd) {
+		define("jquery", [], function () {
+			return jQuery;
+		});
 	}
 }
 
 // If there is a window object, that at least has a document property,
 // define jQuery and $ identifiers
-if ( typeof window === "object" && typeof window.document === "object" ) {
+if (typeof window === "object" && typeof window.document === "object") {
 	window.jQuery = window.$ = jQuery;
 }

@@ -4,17 +4,16 @@ import java.math.BigDecimal;
 
 /**
  * @author Loic Talhouarne
- *
+ *         <p>
  *         {@code Interface} representing a product sold by myRetail.
- *         
  */
 public interface Product {
 
-	public String getProductName();
+    String getProductName();
 
-	public BigDecimal getPrice();
+    BigDecimal getPrice();
 
-	public int getBarCode();
+    int getBarCode();
 
-	public String getDescription();
+    String getDescription();
 }

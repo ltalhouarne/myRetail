@@ -9,9 +9,9 @@ var fs = require("fs"),
 	categories = [],
 	version = process.argv[2];
 
-if ( !/^\d+\.\d+/.test( version ) ) {
-	console.error( "Invalid version number: " + version );
-	process.exit( 1 );
+if (!/^\d+\.\d+/.test(version)) {
+	console.error("Invalid version number: " + version);
+	process.exit(1);
 }
 
 http.request({
@@ -22,25 +22,25 @@ http.request({
 }, function (res) {
 	var data = [];
 
-	res.on( "data", function( chunk ) {
-		data.push( chunk );
+	res.on("data", function (chunk) {
+		data.push(chunk);
 	});
 
-	res.on( "end", function() {
+	res.on("end", function () {
 		var match,
 			file = data.join(""),
 			cur;
 
-		while ( (match = extract.exec( file )) ) {
-			if ( "#" + match[1] !== match[2] ) {
+		while ((match = extract.exec(file))) {
+			if ("#" + match[1] !== match[2]) {
 				var cat = match[3];
 
-				if ( !cur || cur !== cat ) {
-					if ( cur ) {
+				if (!cur || cur !== cat) {
+					if (cur) {
 						console.log("</ul>");
 					}
 					cur = cat;
-					console.log( "<h3>" + cat.charAt(0).toUpperCase() + cat.slice(1) + "</h3>" );
+					console.log("<h3>" + cat.charAt(0).toUpperCase() + cat.slice(1) + "</h3>");
 					console.log("<ul>");
 				}
 
@@ -50,7 +50,7 @@ http.request({
 				);
 			}
 		}
-		if ( cur ) {
+		if (cur) {
 			console.log("</ul>");
 		}
 

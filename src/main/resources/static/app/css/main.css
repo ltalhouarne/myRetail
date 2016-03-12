@@ -1,310 +1,314 @@
 html {
-	font-weight: 200 !important;
+    font-weight: 200 !important;
 }
 
 h1, .h1 {
-	font-weight: 300;
-	font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
 }
 
 a {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .category {
-	margin-left: 70px;
-	margin-bottom: 30px;
-	width: 300px;
+    margin-left: 70px;
+    margin-bottom: 30px;
+    width: 300px;
 }
 
-.detailedImage{
-	float:left; 
-	margin-right: 30px;
+.detailedImage {
+    float: left;
+    margin-right: 30px;
 }
 
-.modal{
-	margin-top: 100px;
+.modal {
+    margin-top: 100px;
 }
 
-.buy{
-	margin-right: 10px;
+.buy {
+    margin-right: 10px;
 }
 
-.modalImg{
-	width:100px;
-	height:100px;
-	margin-left:auto;
-	margin-right:auto;
+.modalImg {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.singleCategory{
-	margin-left: auto;
-	margin-right: auto;
+.singleCategory {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
-	margin-left: 15%;
+    margin-left: 15%;
 }
 
 #purchase {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
 .marginBottomAndTop {
-	margin-top: 65px;
-	margin-bottom: 55px;
+    margin-top: 65px;
+    margin-bottom: 55px;
 }
 
 #divider {
-	margin-top: 100px;
+    margin-top: 100px;
 }
 
 .row {
-	margin-top: 5%;
+    margin-top: 5%;
 }
 
 .under {
-	margin-top: 180px;
-	margin-bottom: 30px;
+    margin-top: 180px;
+    margin-bottom: 30px;
 }
 
 .feature {
-	margin-left: 15%;
+    margin-left: 15%;
 }
 
 .caption a {
-	float: right;
+    float: right;
 }
 
 .icon-shopping-cart {
-	float: right;
+    float: right;
 }
 
 .bigTitle {
-	margin-top: 100px;
-	font-size: 88px !important;
-	font-weight: 300;
-	font-family: 'Lobster', cursive;
+    margin-top: 100px;
+    font-size: 88px !important;
+    font-weight: 300;
+    font-family: 'Lobster', cursive;
 }
 
 .subTitle {
-	margin-left: 25px;
-	font-weight: 100;
+    margin-left: 25px;
+    font-weight: 100;
 }
 
 .lowerCase {
-	text-transform: lowercase;
+    text-transform: lowercase;
 }
 
 .navbar-brand {
-	color: white !important;
-	font-size: 1.1em !important;
+    color: white !important;
+    font-size: 1.1em !important;
 }
 
 .productbox {
-	position: relative;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	-webkit-transition: all .2s ease-in-out;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
 }
 
 .caption {
-	padding: 10px;
-	background-color: rgba(0, 0, 0, 0.7);
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	max-height: 40%;
-	overflow: hidden;
-	font-size: 11px;
-	color: #FFF;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 40%;
+    overflow: hidden;
+    font-size: 11px;
+    color: #FFF;
 }
 
 .finalprice {
-	font-size: 15px;
-	color: #AAFCAE;
+    font-size: 15px;
+    color: #AAFCAE;
 }
 
 h5 {
-	margin-top: 0px;
-	color: white;
-	max-height: 30px;
-	overflow: hidden;
+    margin-top: 0px;
+    color: white;
+    max-height: 30px;
+    overflow: hidden;
 }
 
 .img-responsive img {
-	width: 100%;
+    width: 100%;
 }
 
 .container {
-	width: 100%;
+    width: 100%;
 }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2,
-	.col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
-	.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5,
-	.col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
-	.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8,
-	.col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
-	.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11,
-	.col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
-	{
-	padding: 5px;
+.col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5,
+.col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8,
+.col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11,
+.col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding: 5px;
 }
 
 .btn-block {
-	margin-top: 5px;
+    margin-top: 5px;
 }
 
 .saleoffrate {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	padding-top: 13px;
-	text-align: center;
-	background-color: rgba(76, 174, 76, 0.8);
-	color: #FFFFFF;
-	border-radius: 50%;
-	height: 50px;
-	width: 50px;
-	line-height: 13px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding-top: 13px;
+    text-align: center;
+    background-color: rgba(76, 174, 76, 0.8);
+    color: #FFFFFF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 13px;
 }
 
-@media ( min-width : 384px) and (max-width: 768px) {
-	.img-responsive img {
-		max-width: 50%;
-	}
-	.img-responsive {
-		text-align: center;
-	}
+@media ( min-width: 384px) and (max-width: 768px) {
+    .img-responsive img {
+        max-width: 50%;
+    }
+
+    .img-responsive {
+        text-align: center;
+    }
 }
 
 .cbp-af-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: #B50000;
-	z-index: 10000;
-	height: 125px;
-	overflow: hidden;
-	-webkit-transition: height 0.3s;
-	-moz-transition: height 0.3s;
-	transition: height 0.3s;
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #B50000;
+    z-index: 10000;
+    height: 125px;
+    overflow: hidden;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .cbp-af-header .cbp-af-inner {
-	width: 90%;
-	max-width: 69em;
-	margin: 0 auto;
-	padding: 0 1.875em;
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 0 1.875em;
 }
 
 .cbp-af-header h1, .cbp-af-header nav {
-	display: inline-block;
-	position: relative;
+    display: inline-block;
+    position: relative;
 }
 
 /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header h1, .cbp-af-header nav a {
-	line-height: 125px;
+    line-height: 125px;
 }
 
 .size {
-	width: 800px;
-	float: right;
+    width: 800px;
+    float: right;
 }
 
 .cbp-af-header h1 {
-	text-transform: uppercase;
-	color: white;
-	letter-spacing: 4px;
-	font-size: 4em;
-	margin: 0;
-	float: left;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 4em;
+    margin: 0;
+    float: left;
 }
 
 .cbp-af-header nav {
-	float: right;
+    float: right;
 }
 
 .cbp-af-header nav a {
-	color: white;
-	font-weight: 700;
-	margin: 0 0 0 20px;
-	font-size: 1.4em;
-	text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin: 0 0 0 20px;
+    font-size: 1.4em;
+    text-decoration: none;
 }
 
 .cbp-af-header nav a:hover {
-	color: white;
+    color: white;
 }
 
 /* Transitions and class for reduced height */
 .cbp-af-header h1, .cbp-af-header nav a {
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .cbp-af-header.cbp-af-header-shrink {
-	height: 65px;
+    height: 65px;
 }
 
-.cbp-af-header.cbp-af-header-shrink h1, .cbp-af-header.cbp-af-header-shrink nav a
-	{
-	line-height: 65px;
+.cbp-af-header.cbp-af-header-shrink h1, .cbp-af-header.cbp-af-header-shrink nav a {
+    line-height: 65px;
 }
 
 .cbp-af-header.cbp-af-header-shrink h1 {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 /* Example Media Queries */
 @media screen and (max-width: 55em) {
-	.cbp-af-header .cbp-af-inner {
-		width: 100%;
-	}
-	.cbp-af-header h1, .cbp-af-header nav {
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-		float: none;
-	}
-	.cbp-af-header h1, .cbp-af-header nav a {
-		line-height: 115px;
-	}
-	.cbp-af-header nav a {
-		margin: 0 10px;
-	}
-	.cbp-af-header.cbp-af-header-shrink h1, .cbp-af-header.cbp-af-header-shrink nav a
-		{
-		line-height: 45px;
-	}
-	.cbp-af-header.cbp-af-header-shrink h1 {
-		font-size: 2em;
-	}
-	.cbp-af-header.cbp-af-header-shrink nav a {
-		font-size: 1em;
-	}
+    .cbp-af-header .cbp-af-inner {
+        width: 100%;
+    }
+
+    .cbp-af-header h1, .cbp-af-header nav {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+
+    .cbp-af-header h1, .cbp-af-header nav a {
+        line-height: 115px;
+    }
+
+    .cbp-af-header nav a {
+        margin: 0 10px;
+    }
+
+    .cbp-af-header.cbp-af-header-shrink h1, .cbp-af-header.cbp-af-header-shrink nav a {
+        line-height: 45px;
+    }
+
+    .cbp-af-header.cbp-af-header-shrink h1 {
+        font-size: 2em;
+    }
+
+    .cbp-af-header.cbp-af-header-shrink nav a {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 32.25em) {
-	.cbp-af-header nav a {
-		font-size: 1em;
-	}
+    .cbp-af-header nav a {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 24em) {
-	.cbp-af-header nav a, .cbp-af-header.cbp-af-header-shrink nav a {
-		line-height: 1;
-	}
+    .cbp-af-header nav a, .cbp-af-header.cbp-af-header-shrink nav a {
+        line-height: 1;
+    }
 }

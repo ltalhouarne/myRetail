@@ -1,7 +1,5 @@
 package retail.infrastructure.rest;
 
-import javax.validation.Valid;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,37 +10,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import retail.core.dtos.MerchandiseItemDTO;
 import retail.core.exception.InvalidMerchandiseItemRequestException;
 import retail.infrastructure.services.MerchandiseIntakeService;
 
+import javax.validation.Valid;
+
 /**
  * @author Loic Talhouarne
- * 
+ *         <p>
  *         Represents Intake {@code Controller}
- *
  */
 @RestController
 @RequestMapping(value = "/merchandise")
 public class MerchandiseIntakeController {
-	private static final Logger LOGGER = LoggerFactory.getLogger(MerchandiseIntakeController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MerchandiseIntakeController.class);
 
-	@Autowired
-	private MerchandiseIntakeService intakeService;
+    @Autowired
+    private MerchandiseIntakeService intakeService;
 
-	@RequestMapping(value = "/items", method = RequestMethod.POST)
-	public ResponseEntity<String> saveItem(@RequestBody @Valid MerchandiseItemDTO merchandiseItem, Errors errors) {
-		LOGGER.debug("saveItem request received...");
+    @RequestMapping(value = "/items", method = RequestMethod.POST)
+    public ResponseEntity<String> saveItem(@RequestBody @Valid MerchandiseItemDTO merchandiseItem, Errors errors) {
+        LOGGER.debug("saveItem request received...");
 
-		if (errors.hasErrors()) {
-			throw new InvalidMerchandiseItemRequestException("Invalid item: " + merchandiseItem.toString(), errors);
-		}
+        if (errors.hasErrors()) {
+            throw new InvalidMerchandiseItemRequestException("Invalid item: " + merchandiseItem.toString(), errors);
+        }
 
-		intakeService.saveMerchandiseItem(merchandiseItem);
+        intakeService.saveMerchandiseItem(merchandiseItem);
 
-		LOGGER.debug("Item saved properly...");
+        LOGGER.debug("Item saved properly...");
 
-		return new ResponseEntity<String>(HttpStatus.OK);
-	}
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

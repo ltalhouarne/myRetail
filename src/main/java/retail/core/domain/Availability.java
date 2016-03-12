@@ -2,25 +2,20 @@ package retail.core.domain;
 
 /**
  * @author Loic Talhouarne
- * 
+ *         <p>
  *         Availability constants.
- *
  */
 public enum Availability {
-	AVAILABLE("available"), UNAVAILABLE("unavailable");
+    AVAILABLE("available"), UNAVAILABLE("unavailable");
 
-	private final String availability;
+    private final String availability;
 
-	private Availability(String availability) {
-		this.availability = availability;
-	}
+    Availability(String availability) {
+        this.availability = availability;
+    }
 
-	public String getAvailability() {
-		return availability;
-	}
-
-	@Override
-	public String toString() {
-		return availability;
-	}
+    @Override
+    public String toString() {
+        return availability;
+    }
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" id="html">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 	<title>jQuery Test Suite</title>
-	<link rel="Stylesheet" media="screen" href="qunit/qunit/qunit.css" />
-	<link rel="Stylesheet" media="screen" href="data/testsuite.css" />
+	<link rel="Stylesheet" media="screen" href="qunit/qunit/qunit.css"/>
+	<link rel="Stylesheet" media="screen" href="data/testsuite.css"/>
 	<!-- Includes -->
 
 	<!-- Allows us to fetch submodule tests when using a no-ajax build -->
@@ -15,7 +15,7 @@
 
 	<script src="qunit/qunit/qunit.js"></script>
 	<script>
-		(function() {
+		(function () {
 			var src = "../dist/jquery.min.js";
 
 			// Config parameter to use minified jQuery
@@ -24,7 +24,7 @@
 				label: "Load unminified",
 				tooltip: "Load the development (unminified) jQuery file"
 			});
-			if ( QUnit.urlParams.dev ) {
+			if (QUnit.urlParams.dev) {
 				src = "../dist/jquery.js";
 			}
 
@@ -34,14 +34,14 @@
 				label: "Bypass optimizations",
 				tooltip: "Force use of the most basic code by disabling native querySelectorAll; contains; compareDocumentPosition"
 			});
-			if ( QUnit.urlParams.basic ) {
+			if (QUnit.urlParams.basic) {
 				document.querySelectorAll = null;
 				document.documentElement.contains = null;
 				document.documentElement.compareDocumentPosition = null;
 			}
 
 			// Load jQuery
-			document.write( "<script id='jquery-js' src='" + src + "'><\x2Fscript>" );
+			document.write("<script id='jquery-js' src='" + src + "'><\x2Fscript>");
 		})();
 	</script>
 	<script src="data/testrunner.js"></script>
@@ -69,28 +69,29 @@
 
 	<!-- Subproject tests must be last because they replace our test fixture -->
 	<script>
-		testSubproject( "Sizzle", "../src/sizzle/test/", /^unit\/.*\.js$/ );
+		testSubproject("Sizzle", "../src/sizzle/test/", /^unit\/.*\.js$/);
 	</script>
 
 	<script>
 		// html5shiv, enabling HTML5 elements to be used with jQuery
 		( "abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup " +
-			"mark meter nav output progress section summary time video"
-		).replace(/\w+/g, function(n) {
+				"mark meter nav output progress section summary time video"
+		).replace(/\w+/g, function (n) {
 			document.createElement(n);
 		});
 	</script>
 </head>
 
 <body id="body">
-	<div id="qunit"></div>
+<div id="qunit"></div>
 
-	<!-- Test HTML -->
-	<!-- this iframe is outside the #qunit-fixture so it won't reload constantly wasting time, but it means the tests must be "safe" and clean up after themselves -->
-	<iframe id="loadediframe" name="loadediframe" style="display:none;" src="data/iframe.html"></iframe>
-	<dl id="dl" style="position:absolute;top:-32767px;left:-32767px;width:1px;">
+<!-- Test HTML -->
+<!-- this iframe is outside the #qunit-fixture so it won't reload constantly wasting time, but it means the tests must be "safe" and clean up after themselves -->
+<iframe id="loadediframe" name="loadediframe" style="display:none;" src="data/iframe.html"></iframe>
+<dl id="dl" style="position:absolute;top:-32767px;left:-32767px;width:1px;">
 	<div id="qunit-fixture">
-		<p id="firstp">See <a id="simon1" href="http://simon.incutio.com/archive/2003/03/25/#getElementsBySelector" rel="bookmark">this blog entry</a> for more information.</p>
+		<p id="firstp">See <a id="simon1" href="http://simon.incutio.com/archive/2003/03/25/#getElementsBySelector" rel="bookmark">this blog entry</a> for more
+			information.</p>
 		<p id="ap">
 			Here are some links in a normal paragraph: <a id="google" href="http://www.google.com/" title="Google!">Google</a>,
 			<a id="groups" href="http://groups.google.com/" class="GROUPS">Google Groups (Link)</a>.
@@ -101,7 +102,8 @@
 		<div id="foo">
 			<p id="sndp">Everything inside the red border is inside a div with <code>id="foo"</code>.</p>
 			<p lang="en" id="en">This is a normal link: <a id="yahoo" href="http://www.yahoo.com/" class="blogTest">Yahoo</a></p>
-			<p id="sap">This link has <code><a href="#2" id="anchor2">class="blog"</a></code>: <a href="http://simon.incutio.com/" class="blog link" id="simon">Simon Willison's Weblog</a></p>
+			<p id="sap">This link has <code><a href="#2" id="anchor2">class="blog"</a></code>: <a href="http://simon.incutio.com/" class="blog link" id="simon">Simon
+				Willison's Weblog</a></p>
 
 		</div>
 		<div id="nothiddendiv" style="height:1px;background:white;" class="nothiddendiv">
@@ -124,8 +126,8 @@
 			<input type="hidden" name="hidden" id="hidden1"/>
 			<input type="text" style="display:none;" name="foo[bar]" id="hidden2"/>
 
-			<input type="text" id="name" name="name" value="name" />
-			<input type="search" id="search" name="search" value="search" />
+			<input type="text" id="name" name="name" value="name"/>
+			<input type="search" id="search" name="search" value="search"/>
 
 			<button id="button" name="button" type="button">Button</button>
 
@@ -166,8 +168,8 @@
 			</select>
 
 			<object id="object1" codebase="stupid">
-				<param name="p1" value="x1" />
-				<param name="p2" value="x2" />
+				<param name="p1" value="x1"/>
+				<param name="p2" value="x2"/>
 			</object>
 
 			<span id="台北Táiběi"></span>
@@ -189,25 +191,25 @@
 
 		<form id="name-tests">
 			<!-- Inputs with a grouped name attribute. -->
-			<input name="types[]" id="types_all" type="checkbox" value="all" />
-			<input name="types[]" id="types_anime" type="checkbox" value="anime" />
-			<input name="types[]" id="types_movie" type="checkbox" value="movie" />
+			<input name="types[]" id="types_all" type="checkbox" value="all"/>
+			<input name="types[]" id="types_anime" type="checkbox" value="anime"/>
+			<input name="types[]" id="types_movie" type="checkbox" value="movie"/>
 		</form>
 
 		<form id="testForm" action="#" method="get">
 			<textarea name="T3" rows="2" cols="15">?
 Z</textarea>
-			<input type="hidden" name="H1" value="x" />
-			<input type="hidden" name="H2" />
-			<input name="PWD" type="password" value="" />
-			<input name="T1" type="text" />
-			<input name="T2" type="text" value="YES" readonly="readonly" />
-			<input type="checkbox" name="C1" value="1" />
-			<input type="checkbox" name="C2" />
-			<input type="radio" name="R1" value="1" />
-			<input type="radio" name="R1" value="2" />
-			<input type="text" name="My Name" value="me" />
-			<input type="reset" name="reset" value="NO" />
+			<input type="hidden" name="H1" value="x"/>
+			<input type="hidden" name="H2"/>
+			<input name="PWD" type="password" value=""/>
+			<input name="T1" type="text"/>
+			<input name="T2" type="text" value="YES" readonly="readonly"/>
+			<input type="checkbox" name="C1" value="1"/>
+			<input type="checkbox" name="C2"/>
+			<input type="radio" name="R1" value="1"/>
+			<input type="radio" name="R1" value="2"/>
+			<input type="text" name="My Name" value="me"/>
+			<input type="reset" name="reset" value="NO"/>
 			<select name="S1">
 				<option value="abc">ABC</option>
 				<option value="abc">ABC</option>
@@ -224,17 +226,17 @@ Z</textarea>
 			<select name="S4">
 				<option value="" selected="selected">NO</option>
 			</select>
-			<input type="submit" name="sub1" value="NO" />
-			<input type="submit" name="sub2" value="NO" />
-			<input type="image" name="sub3" value="NO" />
+			<input type="submit" name="sub1" value="NO"/>
+			<input type="submit" name="sub2" value="NO"/>
+			<input type="image" name="sub3" value="NO"/>
 			<button name="sub4" type="submit" value="NO">NO</button>
-			<input name="D1" type="text" value="NO" disabled="disabled" />
-			<input type="checkbox" checked="checked" disabled="disabled" name="D2" value="NO" />
-			<input type="radio" name="D3" value="NO" checked="checked" disabled="disabled" />
+			<input name="D1" type="text" value="NO" disabled="disabled"/>
+			<input type="checkbox" checked="checked" disabled="disabled" name="D2" value="NO"/>
+			<input type="radio" name="D3" value="NO" checked="checked" disabled="disabled"/>
 			<select name="D4" disabled="disabled">
 				<option selected="selected" value="NO">NO</option>
 			</select>
-			<input id="list-test" type="text" />
+			<input id="list-test" type="text"/>
 			<datalist id="datalist">
 				<option value="option"></option>
 			</datalist>
@@ -245,17 +247,23 @@ Z</textarea>
 					<input type="radio" name="checkedtestradios" checked="checked"/>
 					<input type="radio" name="checkedtestradios" value="on"/>
 					<input type="checkbox" name="checkedtestcheckboxes" checked="checked"/>
-					<input type="checkbox" name="checkedtestcheckboxes" />
+					<input type="checkbox" name="checkedtestcheckboxes"/>
 				</div>
 			</form>
 			<div id="nonnodes"><span id="nonnodesElement">hi</span> there <!-- mon ami --></div>
 			<div id="t2037">
-				<div><div class="hidden">hidden</div></div>
+				<div>
+					<div class="hidden">hidden</div>
+				</div>
 			</div>
 			<div id="t6652">
 				<div></div>
 			</div>
-			<div id="no-clone-exception"><object><embed></embed></object></div>
+			<div id="no-clone-exception">
+				<object>
+					<embed></embed>
+				</object>
+			</div>
 		</div>
 
 		<div id="tabindex-tests">
@@ -300,38 +308,70 @@ Z</textarea>
 		</div>
 		<div id="fx-test-group" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">
 			<div id="fx-queue" name="test">
-				<div id="fadein" class='chain-test' name='div'>fadeIn<div>fadeIn</div></div>
-				<div id="fadeout" class='chain-test chain-test-out'>fadeOut<div>fadeOut</div></div>
+				<div id="fadein" class='chain-test' name='div'>fadeIn
+					<div>fadeIn</div>
+				</div>
+				<div id="fadeout" class='chain-test chain-test-out'>fadeOut
+					<div>fadeOut</div>
+				</div>
 
-				<div id="show" class='chain-test'>show<div>show</div></div>
-				<div id="hide" class='chain-test chain-test-out'>hide<div>hide</div></div>
-				<div id="easehide" class='chain-test chain-test-out'>hide<div>hide</div></div>
+				<div id="show" class='chain-test'>show
+					<div>show</div>
+				</div>
+				<div id="hide" class='chain-test chain-test-out'>hide
+					<div>hide</div>
+				</div>
+				<div id="easehide" class='chain-test chain-test-out'>hide
+					<div>hide</div>
+				</div>
 
-				<div id="togglein" class='chain-test'>togglein<div>togglein</div></div>
-				<div id="toggleout" class='chain-test chain-test-out'>toggleout<div>toggleout</div></div>
-				<div id="easetoggleout" class='chain-test chain-test-out'>toggleout<div>toggleout</div></div>
+				<div id="togglein" class='chain-test'>togglein
+					<div>togglein</div>
+				</div>
+				<div id="toggleout" class='chain-test chain-test-out'>toggleout
+					<div>toggleout</div>
+				</div>
+				<div id="easetoggleout" class='chain-test chain-test-out'>toggleout
+					<div>toggleout</div>
+				</div>
 
-				<div id="slideup" class='chain-test'>slideUp<div>slideUp</div></div>
-				<div id="slidedown" class='chain-test chain-test-out'>slideDown<div>slideDown</div></div>
-				<div id="easeslideup" class='chain-test'>slideUp<div>slideUp</div></div>
+				<div id="slideup" class='chain-test'>slideUp
+					<div>slideUp</div>
+				</div>
+				<div id="slidedown" class='chain-test chain-test-out'>slideDown
+					<div>slideDown</div>
+				</div>
+				<div id="easeslideup" class='chain-test'>slideUp
+					<div>slideUp</div>
+				</div>
 
-				<div id="slidetogglein" class='chain-test'>slideToggleIn<div>slideToggleIn</div></div>
-				<div id="slidetoggleout" class='chain-test chain-test-out'>slideToggleOut<div>slideToggleOut</div></div>
+				<div id="slidetogglein" class='chain-test'>slideToggleIn
+					<div>slideToggleIn</div>
+				</div>
+				<div id="slidetoggleout" class='chain-test chain-test-out'>slideToggleOut
+					<div>slideToggleOut</div>
+				</div>
 
-				<div id="fadetogglein" class='chain-test'>fadeToggleIn<div>fadeToggleIn</div></div>
-				<div id="fadetoggleout" class='chain-test chain-test-out'>fadeToggleOut<div>fadeToggleOut</div></div>
+				<div id="fadetogglein" class='chain-test'>fadeToggleIn
+					<div>fadeToggleIn</div>
+				</div>
+				<div id="fadetoggleout" class='chain-test chain-test-out'>fadeToggleOut
+					<div>fadeToggleOut</div>
+				</div>
 
-				<div id="fadeto" class='chain-test'>fadeTo<div>fadeTo</div></div>
+				<div id="fadeto" class='chain-test'>fadeTo
+					<div>fadeTo</div>
+				</div>
 			</div>
 
 			<div id="fx-tests"></div>
 			<span id="display"></span>
 		</div>
 	</div>
-	</dl>
-	<map name="imgmap" id="imgmap">
-		<area shape="rect" coords="0,0,200,50">
-	</map>
+</dl>
+<map name="imgmap" id="imgmap">
+	<area shape="rect" coords="0,0,200,50">
+</map>
 
 </body>
 </html>

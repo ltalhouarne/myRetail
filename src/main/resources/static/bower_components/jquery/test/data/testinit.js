@@ -3,7 +3,7 @@
 var amdDefined, fireNative,
 	originaljQuery = this.jQuery || "jQuery",
 	original$ = this.$ || "$",
-	// see RFC 2606
+// see RFC 2606
 	externalHost = "example.com";
 
 this.hasPHP = true;
@@ -16,7 +16,7 @@ this.$ = original$;
 /**
  * Set up a mock AMD define function for testing AMD registration.
  */
-function define( name, dependencies, callback ) {
+function define(name, dependencies, callback) {
 	amdDefined = callback();
 }
 
@@ -27,12 +27,12 @@ define.amd = {};
  * @example q("main", "foo", "bar")
  * @result [<div id="main">, <span id="foo">, <input id="bar">]
  */
-this.q = function() {
+this.q = function () {
 	var r = [],
 		i = 0;
 
-	for ( ; i < arguments.length; i++ ) {
-		r.push( document.getElementById( arguments[i] ) );
+	for (; i < arguments.length; i++) {
+		r.push(document.getElementById(arguments[i]));
 	}
 	return r;
 };
@@ -45,19 +45,19 @@ this.q = function() {
  * @example t("Check for something", "//[a]", ["foo", "baar"]);
  * @result returns true if "//[a]" return two elements with the IDs 'foo' and 'baar'
  */
-this.t = function( a, b, c ) {
+this.t = function (a, b, c) {
 	var f = jQuery(b).get(),
 		s = "",
 		i = 0;
 
-	for ( ; i < f.length; i++ ) {
-		s += ( s && "," ) + '"' + f[ i ].id + '"';
+	for (; i < f.length; i++) {
+		s += ( s && "," ) + '"' + f[i].id + '"';
 	}
 
-	deepEqual(f, q.apply( q, c ), a + " (" + b + ")");
+	deepEqual(f, q.apply(q, c), a + " (" + b + ")");
 };
 
-this.createDashboardXML = function() {
+this.createDashboardXML = function () {
 	var string = '<?xml version="1.0" encoding="UTF-8"?> \
 	<dashboard> \
 		<locations class="foo"> \
@@ -73,7 +73,7 @@ this.createDashboardXML = function() {
 	return jQuery.parseXML(string);
 };
 
-this.createWithFriesXML = function() {
+this.createWithFriesXML = function () {
 	var string = '<?xml version="1.0" encoding="UTF-8"?> \
 	<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" \
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema" \
@@ -100,18 +100,18 @@ this.createWithFriesXML = function() {
 		</soap:Body> \
 	</soap:Envelope>';
 
-	return jQuery.parseXML( string.replace( /\{\{\s*externalHost\s*\}\}/g, externalHost ) );
+	return jQuery.parseXML(string.replace(/\{\{\s*externalHost\s*\}\}/g, externalHost));
 };
 
-this.createXMLFragment = function() {
+this.createXMLFragment = function () {
 	var xml, frag;
-	if ( window.ActiveXObject ) {
+	if (window.ActiveXObject) {
 		xml = new ActiveXObject("msxml2.domdocument");
 	} else {
-		xml = document.implementation.createDocument( "", "", null );
+		xml = document.implementation.createDocument("", "", null);
 	}
 
-	if ( xml ) {
+	if (xml) {
 		frag = xml.createElement("data");
 	}
 
@@ -119,14 +119,14 @@ this.createXMLFragment = function() {
 };
 
 fireNative = document.createEvent ?
-	function( node, type ) {
+	function (node, type) {
 		var event = document.createEvent('HTMLEvents');
-		event.initEvent( type, true, true );
-		node.dispatchEvent( event );
+		event.initEvent(type, true, true);
+		node.dispatchEvent(event);
 	} :
-	function( node, type ) {
+	function (node, type) {
 		var event = document.createEventObject();
-		node.fireEvent( 'on' + type, event );
+		node.fireEvent('on' + type, event);
 	};
 
 /**
@@ -138,69 +138,69 @@ fireNative = document.createEvent ?
  * @example url("data/test.php?foo=bar")
  * @result "data/test.php?foo=bar&10538358345554"
  */
-function url( value ) {
+function url(value) {
 	return value + (/\?/.test(value) ? "&" : "?") + new Date().getTime() + "" + parseInt(Math.random() * 100000, 10);
 }
 
 // Ajax testing helper
-this.ajaxTest = function( title, expect, options ) {
+this.ajaxTest = function (title, expect, options) {
 	var requestOptions;
-	if ( jQuery.isFunction( options ) ) {
+	if (jQuery.isFunction(options)) {
 		options = options();
 	}
 	options = options || [];
 	requestOptions = options.requests || options.request || options;
-	if ( !jQuery.isArray( requestOptions ) ) {
-		requestOptions = [ requestOptions ];
+	if (!jQuery.isArray(requestOptions)) {
+		requestOptions = [requestOptions];
 	}
-	asyncTest( title, expect, function() {
-		if ( options.setup ) {
+	asyncTest(title, expect, function () {
+		if (options.setup) {
 			options.setup();
 		}
 
 		var completed = false,
 			remaining = requestOptions.length,
-			complete = function() {
-				if ( !completed && --remaining === 0 ) {
+			complete = function () {
+				if (!completed && --remaining === 0) {
 					completed = true;
 					delete ajaxTest.abort;
-					if ( options.teardown ) {
+					if (options.teardown) {
 						options.teardown();
 					}
 					start();
 				}
 			},
-			requests = jQuery.map( requestOptions, function( options ) {
-				var request = ( options.create || jQuery.ajax )( options ),
-					callIfDefined = function( deferType, optionType ) {
-						var handler = options[ deferType ] || !!options[ optionType ];
-						return function( _, status ) {
-							if ( !completed ) {
-								if ( !handler ) {
-									ok( false, "unexpected " + status );
-								} else if ( jQuery.isFunction( handler ) ) {
-									handler.apply( this, arguments );
+			requests = jQuery.map(requestOptions, function (options) {
+				var request = ( options.create || jQuery.ajax )(options),
+					callIfDefined = function (deferType, optionType) {
+						var handler = options[deferType] || !!options[optionType];
+						return function (_, status) {
+							if (!completed) {
+								if (!handler) {
+									ok(false, "unexpected " + status);
+								} else if (jQuery.isFunction(handler)) {
+									handler.apply(this, arguments);
 								}
 							}
 						};
 					};
 
-				if ( options.afterSend ) {
-					options.afterSend( request );
+				if (options.afterSend) {
+					options.afterSend(request);
 				}
 
 				return request
-					.done( callIfDefined( "done", "success" ) )
-					.fail( callIfDefined( "fail", "error" ) )
-					.always( complete );
+					.done(callIfDefined("done", "success"))
+					.fail(callIfDefined("fail", "error"))
+					.always(complete);
 			});
 
-		ajaxTest.abort = function( reason ) {
-			if ( !completed ) {
+		ajaxTest.abort = function (reason) {
+			if (!completed) {
 				completed = true;
 				delete ajaxTest.abort;
-				ok( false, "aborted " + reason );
-				jQuery.each( requests, function( i, request ) {
+				ok(false, "aborted " + reason);
+				jQuery.each(requests, function (i, request) {
 					request.abort();
 				});
 			}
@@ -209,56 +209,57 @@ this.ajaxTest = function( title, expect, options ) {
 };
 
 
-this.testIframe = function( fileName, name, fn ) {
+this.testIframe = function (fileName, name, fn) {
 
-	test(name, function() {
+	test(name, function () {
 		// pause execution for now
 		stop();
 
 		// load fixture in iframe
 		var iframe = loadFixture(),
 			win = iframe.contentWindow,
-			interval = setInterval( function() {
-				if ( win && win.jQuery && win.jQuery.isReady ) {
-					clearInterval( interval );
+			interval = setInterval(function () {
+				if (win && win.jQuery && win.jQuery.isReady) {
+					clearInterval(interval);
 					// continue
 					start();
 					// call actual tests passing the correct jQuery instance to use
-					fn.call( this, win.jQuery, win, win.document );
-					document.body.removeChild( iframe );
+					fn.call(this, win.jQuery, win, win.document);
+					document.body.removeChild(iframe);
 					iframe = null;
 				}
-			}, 15 );
+			}, 15);
 	});
 
 	function loadFixture() {
 		var src = url("./data/" + fileName + ".html"),
 			iframe = jQuery("<iframe />").appendTo("body")[0];
-			iframe.style.cssText = "width: 500px; height: 500px; position: absolute; top: -600px; left: -600px; visibility: hidden;";
+		iframe.style.cssText = "width: 500px; height: 500px; position: absolute; top: -600px; left: -600px; visibility: hidden;";
 		iframe.contentWindow.location = src;
 		return iframe;
 	}
 };
 
-this.testIframeWithCallback = function( title, fileName, func ) {
+this.testIframeWithCallback = function (title, fileName, func) {
 
-	test( title, function() {
+	test(title, function () {
 		var iframe;
 
 		stop();
-		window.iframeCallback = function() {
+		window.iframeCallback = function () {
 			var self = this,
 				args = arguments;
-			setTimeout(function() {
+			setTimeout(function () {
 				window.iframeCallback = undefined;
 				iframe.remove();
-				func.apply( self, args );
-				func = function() {};
+				func.apply(self, args);
+				func = function () {
+				};
 				start();
-			}, 0 );
+			}, 0);
 		};
-		iframe = jQuery( "<div/>" ).append(
-			jQuery( "<iframe/>" ).attr( "src", url( "./data/" + fileName ) )
-		).appendTo( "body" );
+		iframe = jQuery("<div/>").append(
+			jQuery("<iframe/>").attr("src", url("./data/" + fileName))
+		).appendTo("body");
 	});
 };

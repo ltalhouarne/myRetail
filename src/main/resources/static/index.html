@@ -1,185 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel='stylesheet' type='text/css'
-	href='/bower_components/bootstrap/dist/css/bootstrap.min.css' />
-<link rel='stylesheet' type='text/css' href='./app/css/main.css' />
-<link rel="stylesheet" type='text/css'
-	href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-<link rel='stylesheet' type='text/css'
-	href='http://fonts.googleapis.com/css?family=Lobster'>
-<link rel='stylesheet' type='text/css'
-	href='http://fonts.googleapis.com/css?family=Lato:400,900italic'>
-<script type="text/javascript"
-	src="/bower_components/jquery/jquery.min.js"></script>
-<script type="text/javascript"
-	src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript"
-	src="/bower_components/angular/angular.min.js"></script>
-<script type="text/javascript"
-	src="/bower_components/angular-resource/angular-resource.min.js"></script>
-<script type="text/javascript" src="/app/js/app.js"></script>
-<script type="text/javascript" src="/app/js/controllers.js"></script>
-<script type="text/javascript" src="/app/js/services.js"></script>
-<script type="text/javascript" src="/app/js/main.js"></script>
+    <link rel='stylesheet' type='text/css'
+          href='/bower_components/bootstrap/dist/css/bootstrap.min.css'/>
+    <link rel='stylesheet' type='text/css' href='./app/css/main.css'/>
+    <link rel="stylesheet" type='text/css'
+          href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' type='text/css'
+          href='http://fonts.googleapis.com/css?family=Lobster'>
+    <link rel='stylesheet' type='text/css'
+          href='http://fonts.googleapis.com/css?family=Lato:400,900italic'>
+    <script type="text/javascript"
+            src="/bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript"
+            src="/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/app/js/app.js"></script>
+    <script type="text/javascript" src="/app/js/controllers.js"></script>
+    <script type="text/javascript" src="/app/js/services.js"></script>
+    <script type="text/javascript" src="/app/js/main.js"></script>
 </head>
 <body ng-app="myApp">
-	<div class="container" ng-controller="AppController">
-		<div class="container">
+<div class="container" ng-controller="AppController">
+    <div class="container">
 
-			<!-- Header -->
-			<div class="cbp-af-header">
-				<div class="cbp-af-inner">
-					<h1 class="retailTitle">
-						<span class="lowerCase">my</span>Retail
-					</h1>
-					<nav>
-						<a id="products" href="">Products</a> <a
-							href="mailto:talhouar.loic@gmail.com">Contact Us</a> <a><i
-							id="cart" class="fa fa-shopping-cart fa-lg"></i> ({{cartCount}})</a>
-					</nav>
-				</div>
-			</div>
+        <!-- Header -->
+        <div class="cbp-af-header">
+            <div class="cbp-af-inner">
+                <h1 class="retailTitle">
+                    <span class="lowerCase">my</span>Retail
+                </h1>
+                <nav>
+                    <a id="products" href="">Products</a> <a
+                        href="mailto:talhouar.loic@gmail.com">Contact Us</a> <a><i
+                        id="cart" class="fa fa-shopping-cart fa-lg"></i> ({{cartCount}})</a>
+                </nav>
+            </div>
+        </div>
 
-			<!-- First section -->
-			<div class="row under">
-				<!-- Title -->
-				<div class="col-xs-18 col-sm-4 col-md-8">
-					<h1 class="bigTitle">Welcome to myRetail!</h1>
-					<h3 class="subTitle">We hope you will find what you are
-						looking for.</h3>
-				</div>
+        <!-- First section -->
+        <div class="row under">
+            <!-- Title -->
+            <div class="col-xs-18 col-sm-4 col-md-8">
+                <h1 class="bigTitle">Welcome to myRetail!</h1>
+                <h3 class="subTitle">We hope you will find what you are
+                    looking for.</h3>
+            </div>
 
-				<!-- Featured Item -->
-				<div class="col-xs-18 col-sm-4 col-md-3 item">
-					<h3 class="feature">Featured Product</h3>
-					<div class="productbox">
-						<div class="imgthumb img-responsive">
-							<img ng-src="{{featured.imageUrl}}">
-						</div>
-						<div class="caption ">
-							<h5>{{featured.productName}}</h5>
-							${{featured.price}} <a href="" class="btn btn-info btn-xs"
-								role="button" data-toggle="modal"
-								data-target="#featured{{featured.id}}">Details</a> <a href=""
-								class="btn btn-default btn-xs add-to-cart buy" role="button"
-								ng-click="cartCount = cartCount + 1">Buy Now</a>
-						</div>
-					</div>
-				</div>
+            <!-- Featured Item -->
+            <div class="col-xs-18 col-sm-4 col-md-3 item">
+                <h3 class="feature">Featured Product</h3>
+                <div class="productbox">
+                    <div class="imgthumb img-responsive">
+                        <img ng-src="{{featured.imageUrl}}">
+                    </div>
+                    <div class="caption ">
+                        <h5>{{featured.productName}}</h5>
+                        ${{featured.price}} <a href="" class="btn btn-info btn-xs"
+                                               role="button" data-toggle="modal"
+                                               data-target="#featured{{featured.id}}">Details</a> <a href=""
+                                                                                                     class="btn btn-default btn-xs add-to-cart buy"
+                                                                                                     role="button"
+                                                                                                     ng-click="cartCount = cartCount + 1">Buy Now</a>
+                    </div>
+                </div>
+            </div>
 
-				<!-- Featured Modal -->
-				<div class="modal fade" id="featured{{featured.id}}" tabindex="-1"
-					role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-								<h4 class="modal-title" id="myModalLabel">{{featured.productName}}</h4>
-							</div>
+            <!-- Featured Modal -->
+            <div class="modal fade" id="featured{{featured.id}}" tabindex="-1"
+                 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">{{featured.productName}}</h4>
+                        </div>
 							<span class="detailedImage"> <img class="modalImg" alt="Please check your internet connection."
-								ng-src="{{featured.imageUrl}}">
+                                                              ng-src="{{featured.imageUrl}}">
 							</span>
 
 
-							<div class="modal-body">
-								{{featured.description}}
-								<div>
-									<br> <b>Price: </b> ${{featured.price}} <br> <span ng-show="featured.bundle.length > 0"><b>Bundle:
-									</b>{{featured.bundle}} </span> <br> <b>Availability: </b>{{featured.availability}}
-									<br> <b>Shipping cost: </b> <span ng-show="featured.shippingCost > 0">${{featured.shippingCost}}</span>
-									<span ng-show="featured.shippingCost == 0">FREE</span>
-								</div>
-							</div>
+                        <div class="modal-body">
+                            {{featured.description}}
+                            <div>
+                                <br> <b>Price: </b> ${{featured.price}} <br> <span ng-show="featured.bundle.length > 0"><b>Bundle:
+                            </b>{{featured.bundle}} </span> <br> <b>Availability: </b>{{featured.availability}}
+                                <br> <b>Shipping cost: </b> <span ng-show="featured.shippingCost > 0">${{featured.shippingCost}}</span>
+                                <span ng-show="featured.shippingCost == 0">FREE</span>
+                            </div>
+                        </div>
 
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default"
-									data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default"
+                                    data-dismiss="modal">Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<hr id="divider">
+        <hr id="divider">
 
-			<!-- Sidebar with Search and Categories -->
-			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar"
-				role="navigation">
+        <!-- Sidebar with Search and Categories -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar"
+             role="navigation">
 
-				<div class="marginBottomAndTop form-group">
-					<input type="text" class="form-control" ng-model="search"
-						placeholder="Search for a product..">
-				</div>
-				<h4 class="category">
-					Category: {{category}}<a href=""> <i ng-show="category !='All'"
-						ng-click="category = 'All'" class="fa fa-times"></i></a>
-				</h4>
-				<ul ng-repeat="categ in categories" class="nav">
-					<li><a href="" class="singleCategory"
-						ng-click="$parent.category = categ"><h3>{{categ}}</h3></a></li>
-				</ul>
-			</div>
+            <div class="marginBottomAndTop form-group">
+                <input type="text" class="form-control" ng-model="search"
+                       placeholder="Search for a product..">
+            </div>
+            <h4 class="category">
+                Category: {{category}}<a href=""> <i ng-show="category !='All'"
+                                                     ng-click="category = 'All'" class="fa fa-times"></i></a>
+            </h4>
+            <ul ng-repeat="categ in categories" class="nav">
+                <li><a href="" class="singleCategory"
+                       ng-click="$parent.category = categ"><h3>{{categ}}</h3></a></li>
+            </ul>
+        </div>
 
-			<!-- Merchandise Items -->
-			<div class="row size">
-				<div ng-repeat="item in items | filter:search | filter:customFilter">
-					<!-- Individual Merchandise Item -->
-					<div class="col-xs-18 col-sm-4 col-md-4 item">
-						<div class="productbox item">
-							<div class="imgthumb img-responsive">
-								<img ng-src="{{item.imageUrl}}" alt="Please check your internet connection.">
-							</div>
-							<div class="caption">
-								<h5>{{item.productName}}</h5>
-								${{item.price}} <a href="" class="btn btn-info btn-xs"
-									role="button" data-toggle="modal" data-target="#{{item.id}}">Details</a>
-								<a href="" class="btn btn-default btn-xs add-to-cart buy"
-									role="button"
-									ng-click="$parent.cartCount = $parent.cartCount + 1">Buy
-									Now</a>
-							</div>
-						</div>
-					</div>
+        <!-- Merchandise Items -->
+        <div class="row size">
+            <div ng-repeat="item in items | filter:search | filter:customFilter">
+                <!-- Individual Merchandise Item -->
+                <div class="col-xs-18 col-sm-4 col-md-4 item">
+                    <div class="productbox item">
+                        <div class="imgthumb img-responsive">
+                            <img ng-src="{{item.imageUrl}}" alt="Please check your internet connection.">
+                        </div>
+                        <div class="caption">
+                            <h5>{{item.productName}}</h5>
+                            ${{item.price}} <a href="" class="btn btn-info btn-xs"
+                                               role="button" data-toggle="modal" data-target="#{{item.id}}">Details</a>
+                            <a href="" class="btn btn-default btn-xs add-to-cart buy"
+                               role="button"
+                               ng-click="$parent.cartCount = $parent.cartCount + 1">Buy
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
 
-					<!-- Merchandise Item Modal -->
-					<div class="modal fade" id="{{item.id}}" tabindex="-1"
-						role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-									<h4 class="modal-title" id="myModalLabel">{{item.productName}}</h4>
-								</div>
+                <!-- Merchandise Item Modal -->
+                <div class="modal fade" id="{{item.id}}" tabindex="-1"
+                     role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">{{item.productName}}</h4>
+                            </div>
 								<span class="detailedImage"> <img class="modalImg"
-									ng-src="{{item.imageUrl}}">
+                                                                  ng-src="{{item.imageUrl}}">
 								</span>
-								<div class="modal-body">
-								{{item.description}}
-								<div>
-									<br> <b>Price: </b> ${{item.price}} <span ng-show="item.bundle.length > 0"><br><b>Bundle:
-									</b>{{item.bundle}} </span> <br> <b>Availability: </b>{{item.availability}}
-									<br> <b>Shipping cost: </b> <span ng-show="item.shippingCost > 0">${{item.shippingCost}}</span>
-									<span ng-show="item.shippingCost == 0">FREE</span>
-								</div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default"
-										data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                            <div class="modal-body">
+                                {{item.description}}
+                                <div>
+                                    <br> <b>Price: </b> ${{item.price}} <span ng-show="item.bundle.length > 0"><br><b>Bundle:
+                                </b>{{item.bundle}} </span> <br> <b>Availability: </b>{{item.availability}}
+                                    <br> <b>Shipping cost: </b> <span ng-show="item.shippingCost > 0">${{item.shippingCost}}</span>
+                                    <span ng-show="item.shippingCost == 0">FREE</span>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script type="text/javascript" src="/app/js/cbpAnimatedHeader.min.js"></script>
 <script type="text/javascript" src="/app/js/classie.js"></script>
