@@ -17,9 +17,6 @@
 http://localhost:8080/
 ```
 
-(If you would like to run it with an embedded tomcat server, head over to the [tomcat-embedded](https://github.com/ltalhouarne/myRetail/tree/tomcat-embedded) branch. 
-
-
 ##Technology Stack:
  ----------------
  
