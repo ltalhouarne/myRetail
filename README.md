@@ -1,4 +1,6 @@
-#myRetail   [![Build Status](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/7/badge/icon)](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/7/)
+[![Build Status](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/7/badge/icon)](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/7/)
+
+#myRetail   
  
  ![alt](https://github.com/ltalhouarne/myRetail/blob/master/myRetail.PNG)
  
