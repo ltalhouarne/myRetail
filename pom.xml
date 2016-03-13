@@ -121,4 +121,17 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://nexus-ltalhouarne.rhcloud.com/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://nexus-ltalhouarne.rhcloud.com/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
