@@ -1,4 +1,4 @@
-[![Build Status](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/7/badge/icon)](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/7/)
+[![Build Status](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/9/badge/icon)](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/9/)
 
 #myRetail   
  
