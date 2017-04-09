@@ -1,8 +1,8 @@
-#my Retail
+# my Retail
  
  ![alt](https://github.com/ltalhouarne/myRetail/blob/master/myRetail.PNG)
  
-##Running Instructions:
+## Running Instructions:
  --------------------
  
 * Run "mvn package" at the root of the project directory (Java release 1.7).
@@ -17,7 +17,7 @@
 http://localhost:8080/
 ```
 
-##Technology Stack:
+## Technology Stack:
  ----------------
  
 Spring boot
