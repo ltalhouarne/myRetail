@@ -1,10 +1,10 @@
 [![Build Status](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail/badge/icon)](https://jenkins-ltalhouarne.rhcloud.com/job/myRetail)
 
-#myRetail   
+# myRetail   
  
  ![alt](https://github.com/ltalhouarne/myRetail/blob/master/myRetail.PNG)
  
-##Running Instructions:
+## Running Instructions:
  --------------------
  
  * You can download the war directly from my private nexus [repository](http://nexus-ltalhouarne.rhcloud.com/#view-repositories;releases~browsestorage)
@@ -23,7 +23,7 @@ http://localhost:8080/
 (If you would like to run it with an embedded tomcat server, head over to the [tomcat-embedded](https://github.com/ltalhouarne/myRetail/tree/tomcat-embedded) branch. 
 
 
-##Technology Stack:
+## Technology Stack:
  ----------------
  
 Spring boot
